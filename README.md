@@ -16,10 +16,6 @@
 
 ---
 
-Star Rating Widget by **Abhishek Jadhav** — Web Developer and first-year BCA student at VIIT, Baramati. Built with **HTML5 + CSS3 + Vanilla JavaScript**: an interactive 5-star rating component with hover preview, click selection, live rating message, contextual feedback, reset, and full keyboard support. No frameworks, no build step, no backend.
-
-> **Internship attribution:** 45-day Web Development Internship at **Veda Technology** — Day 19: Interactive Star Rating Widget.
-
 ## Features
 
 <div align="center">
@@ -105,38 +101,6 @@ node --check script.js
 | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) | https://github.com/0xAbhi13 |
 | ![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white) | https://www.linkedin.com/in/0xabhi13/ |
 | ![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=flat-square&logo=globe&logoColor=white) | https://0xabhi13.github.io/MyPortfolio/ |
-
-## My Approach
-
-1. Read the brief: 5 stars, hover preview, click selection, separate states, reset, keyboard, responsive, ARIA, contextual messages.
-2. Built semantic HTML with `data-rating` attributes and ARIA roles.
-3. Styled mobile-up with CSS custom properties, gold/gray palette, scale hover animation, focus rings.
-4. Wrote vanilla JS with separate `selectedRating` and `hoverRating`, event listeners, roving tabindex, reset.
-5. Tested hover, click, mouse-leave restore, reset, keyboard navigation, and responsive layouts.
-
-## Outcome
-
-A complete, responsive, dependency-free Star Rating Widget: 5 stars, hover preview, click selection, live rating message with contextual feedback, reset, keyboard support, ARIA attributes, and no console errors.
-
-## Testing Checklist
-
-- [x] All five stars appear correctly on initial load.
-- [x] Hovering over the third star previews three filled stars.
-- [x] Clicking the fourth star selects a rating of 4.
-- [x] Moving the cursor away preserves the selected rating.
-- [x] Hovering over another star previews a different rating without overwriting the selected rating.
-- [x] Clicking a new star updates the selection immediately.
-- [x] Reset clears the selection and restores the initial state.
-- [x] The rating message matches the selected rating.
-- [x] Keyboard users can access and change the rating.
-- [x] The layout remains usable on mobile and desktop.
-- [x] No JavaScript errors.
-
-## Limitations
-
-- Rating is not persisted; refreshing the page resets it.
-- No half-star ratings.
-- No backend submission; purely client-side.
 
 ---
 
