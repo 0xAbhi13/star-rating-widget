@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Rating Widget</title>
+  <meta name="description" content="An interactive, accessible 5-star rating widget built with HTML5, CSS3, and vanilla JavaScript." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="cardTitle">
+      <p class="eyebrow">YOUR FEEDBACK MATTERS</p>
+      <h1 id="cardTitle" class="title">Rate Your Experience</h1>
+      <p class="subtitle">How would you rate your experience?</p>
+
+      <div class="stars" id="stars" role="radiogroup" aria-labelledby="cardTitle" aria-describedby="ratingMessage">
+        <button type="button" class="star" role="radio" data-rating="1" aria-label="Rate 1 out of 5 stars" aria-checked="false" tabindex="0">
+          <svg viewBox="0 0 24 24" width="46" height="46" aria-hidden="true" focusable="false">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+        </button>
+        <button type="button" class="star" role="radio" data-rating="2" aria-label="Rate 2 out of 5 stars" aria-checked="false" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="46" height="46" aria-hidden="true" focusable="false">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+        </button>
+        <button type="button" class="star" role="radio" data-rating="3" aria-label="Rate 3 out of 5 stars" aria-checked="false" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="46" height="46" aria-hidden="true" focusable="false">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+        </button>
+        <button type="button" class="star" role="radio" data-rating="4" aria-label="Rate 4 out of 5 stars" aria-checked="false" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="46" height="46" aria-hidden="true" focusable="false">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+        </button>
+        <button type="button" class="star" role="radio" data-rating="5" aria-label="Rate 5 out of 5 stars" aria-checked="false" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="46" height="46" aria-hidden="true" focusable="false">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="rating-display" id="ratingDisplay" aria-live="polite">
+        <p class="rating-value" id="ratingValue">No rating selected</p>
+        <p class="rating-message" id="ratingMessage">Hover or click a star to rate.</p>
+      </div>
+
+      <button type="button" class="reset-btn" id="resetBtn">Reset Rating</button>
+    </section>
+  </main>
+
+  <footer class="footer">Built by Abhishek Jadhav | Veda Technology Internship &mdash; Day 19/45</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Star Rating Widget — Day 19 */
+:root {
+  --bg-1: #f7f9fc;
+  --bg-2: #eef2f7;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --gold: #FFC107;
+  --gold-dark: #e0a800;
+  --gray: #d1d5db;
+  --gray-dark: #9ca3af;
+  --accent: #2563eb;
+  --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  --radius: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.page {
+  width: 100%;
+  max-width: 520px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 28px 32px;
+  text-align: center;
+  animation: cardIn 0.5s ease both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 0 0 26px;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.star {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--gray);
+  transition: transform 0.18s ease, color 0.2s ease, filter 0.2s ease;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star svg {
+  display: block;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+}
+
+.star:hover,
+.star:focus-visible {
+  transform: scale(1.18);
+  color: var(--gold);
+}
+
+.star--filled {
+  color: var(--gold);
+}
+
+.star--filled:hover,
+.star--filled:focus-visible {
+  color: var(--gold-dark);
+}
+
+.star:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.rating-display {
+  margin-bottom: 22px;
+  min-height: 74px;
+}
+
+.rating-value {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rating-message {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: opacity 0.2s ease;
+}
+
+.reset-btn {
+  appearance: none;
+  border: 1.5px solid #e5e7eb;
+  background: #f9fafb;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+.reset-btn:hover {
+  background: #eef2f7;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.reset-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.reset-btn:active {
+  transform: translateY(0);
+}
+
+.footer {
+  margin-top: 22px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 18px 24px;
+  }
+  .star svg {
+    width: 40px;
+    height: 40px;
+  }
+  .stars {
+    gap: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .star, .reset-btn, .rating-message {
+    animation: none !important;
+    transition: none !important;
+  }
+}
